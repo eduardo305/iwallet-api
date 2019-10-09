@@ -17,7 +17,11 @@ mongoose
 		useNewUrlParser: true,
 		useUnifiedTopology: true
 	})
-	.then(() => app.listen(8000, () => console.log('iWallet up and running...')));
+	.then(() =>
+		app.listen(process.env.PORT || 8000, () =>
+			console.log('iWallet up and running...')
+		)
+	);
 
 app.route('/').get((request, response) => response.send('Ola mundo!'));
 
