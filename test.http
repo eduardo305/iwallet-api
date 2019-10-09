@@ -1,0 +1,33 @@
+###
+GET http://localhost:8000/api/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVkdWFyZG9AZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMDgkNktZLkdQTnJPVlUueldLNjBBWFFDLlQ0RjlnVXJpd3dqMC5sRUpTVGJJbjNjU2xaaEZORDIiLCJpYXQiOjE1NzA0OTIxODIsImV4cCI6MTU3MDQ5MjE4Mn0.nOfOXI_oaqks6mHyTIqwHrGXLHBpktOLgWdVc0iBSnU
+
+###
+POST http://localhost:8000/api/users
+Content-Type: application/json
+
+{
+  "name": "eduardo",
+  "email": "eduardo@email.com",
+  "password": "123"
+}
+
+###
+POST http://localhost:8000/api/auth/signin
+Content-Type: application/json
+
+{
+  "email": "eduardo@email.com",
+  "password": "123"
+}
+
+
+###
+POST http://localhost:8000/api/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Eduardo",
+  "email": "eduardo@email.com",
+  "password": "123"
+}
